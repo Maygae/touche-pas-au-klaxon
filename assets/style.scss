@@ -1,0 +1,246 @@
+// ============================================
+// Touche Pas au Klaxon - Fichier Sass principal
+// ============================================
+
+// 1. Variables personnalisées (avant Bootstrap)
+@import 'variables';
+
+// 2. Import de Bootstrap
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+// 3. Variables CSS exposées
+:root {
+  --bs-primary: #00497c;
+  --bs-secondary: #384050;
+  --bs-success: #82b864;
+  --bs-danger: #cd2c2e;
+  --bs-warning: #ffc107;
+  --bs-info: #0074c7;
+  --bs-light: #f1f8fc;
+  --bs-dark: #384050;
+
+  --app-bg: #f1f8fc;
+  --app-surface: #ffffff;
+  --app-border: #d9dee3;
+  --app-text: #384050;
+  --app-muted: #6c757d;
+  --app-accent: #00497c;
+  --app-accent-hover: #003356;
+  --app-accent-soft: #e9f0f7;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: $app-bg;
+  color: $app-text;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+main.container,
+main {
+  flex: 1;
+}
+
+// HEADER / NAVBAR
+.navbar {
+  background-color: $app-surface;
+  border-bottom: 1px solid $app-border;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.navbar-brand {
+  font-style: italic;
+  font-weight: 700;
+  color: $app-accent;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $info;
+  }
+}
+
+.navbar .nav-link {
+  color: $app-text;
+
+  &:hover,
+  &:focus {
+    color: $app-accent;
+  }
+}
+
+// TITRES
+h1,
+h2,
+h3 {
+  color: $app-accent;
+  font-weight: 700;
+}
+
+// CARTES / FORMULAIRES
+.card,
+form.card {
+  background-color: $app-surface;
+  border: 1px solid $app-border;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+// TABLEAUX
+.table {
+  background-color: $app-surface;
+
+  thead th {
+    background-color: #e9f0f7;
+    color: $app-accent;
+    border-bottom: 2px solid $app-border;
+    vertical-align: middle;
+  }
+
+  td,
+  th {
+    vertical-align: middle;
+  }
+}
+
+// BOUTONS
+.btn-dark {
+  background-color: $app-accent;
+  border-color: $app-accent;
+
+  &:hover,
+  &:focus {
+    background-color: #003356;
+    border-color: #003356;
+  }
+}
+
+.btn-outline-dark {
+  color: $app-accent;
+  border-color: $app-accent;
+
+  &:hover,
+  &:focus {
+    background-color: $app-accent;
+    border-color: $app-accent;
+    color: #fff;
+  }
+}
+
+.btn-outline-secondary {
+  &:hover,
+  &:focus {
+    color: #fff;
+  }
+}
+
+// BOUTONS D'ACTION DANS LES TABLES
+.action-buttons .btn,
+td form.d-inline .btn {
+  margin-right: 0.25rem;
+}
+
+.action-buttons .btn:last-child,
+td form.d-inline .btn:last-child {
+  margin-right: 0;
+}
+
+// FORMULAIRES
+.form-control,
+.form-select {
+  border: 1px solid $app-border;
+  border-radius: 0.5rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: rgba(0, 73, 124, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(0, 73, 124, 0.15);
+}
+
+// FIELDSET / LEGEND
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+legend {
+  color: $app-accent;
+  font-weight: 600;
+}
+
+// ALERTES
+.alert {
+  border-radius: 0.65rem;
+}
+
+// MESSAGE FLASH
+.flash-message {
+  max-width: 1320px;
+  margin: 1rem auto 0;
+  padding: 0.85rem 1rem;
+  background-color: #e7f1ff;
+  color: #0c3c60;
+  border: 1px solid #b6d4fe;
+  border-radius: 0.5rem;
+}
+
+// MODALES
+.modal-content {
+  border-radius: 0.75rem;
+  border: 1px solid $app-border;
+}
+
+.modal-header {
+  background-color: #f8f9fa;
+}
+
+// FOOTER
+footer {
+  background-color: $app-surface;
+  border-top: 1px solid $app-border;
+  color: $app-muted;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+
+  p {
+    margin: 0;
+  }
+}
+
+// TEXTE MUTED CUSTOM
+.text-muted-custom {
+  color: $app-muted;
+}
+
+// RESPONSIVE
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .navbar .d-flex {
+    width: 100%;
+    margin-top: 0.75rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .table {
+    font-size: 0.95rem;
+  }
+
+  .flash-message {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}

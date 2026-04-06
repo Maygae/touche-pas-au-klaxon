@@ -1,0 +1,22 @@
+// ============================================
+// Touche Pas au Klaxon - Variables Sass
+// Surcharge des variables Bootstrap
+// ============================================
+
+// Palette Bootstrap
+$primary:   #00497c;   // Bleu principal (boutons, titres)
+$secondary: #384050;   // Gris foncé
+$success:   #82b864;   // Vert (confirmation)
+$danger:    #cd2c2e;   // Rouge (erreurs, suppression)
+$warning:   #ffc107;   // Jaune (avertissements)
+$info:      #0074c7;   // Bleu plus vif (hover, liens secondaires)
+$light:     #f1f8fc;   // Bleu très clair (fond)
+$dark:      #384050;   // Gris foncé (header, footer)
+
+// Variables applicatives
+$app-bg:      #f1f8fc;
+$app-surface: #ffffff;
+$app-border:  #d9dee3;
+$app-text:    #384050;
+$app-muted:   #6c757d;
+$app-accent:  #00497c;

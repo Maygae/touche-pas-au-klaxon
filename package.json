@@ -1,0 +1,13 @@
+{
+  "name": "touche-pas-au-klaxon",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build-css": "sass assets/scss/style.scss public/css/style.css",
+    "watch-css": "sass --watch assets/scss/style.scss public/css/style.css"
+  },
+  "devDependencies": {
+    "sass": "^1.77.0",
+    "bootstrap": "^5.3.3"
+  }
+}
