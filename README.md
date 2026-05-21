@@ -51,8 +51,8 @@ Avant de lancer le projet, il faut disposer de :
 
 1. Cloner le dépôt GitHub :
    ```bash
-   git clone https://github.com/Maygae/touche-pas-au-klaxon.git
-   cd touche-pas-au-klaxon
+   git clone https://github.com/ton-pseudo/touche-pas-au-klaxon.git
+   cd TOUCHE-PAS-AU-KLAXON
    ```
 
 2. Installer les dépendances PHP :
@@ -158,4 +158,4 @@ Le dépôt GitHub contient :
 
 ## Auteur
 
-Projet réalisé dans le cadre de la préparation au titre professionnel Développeur web et web mobile.
+Projet réalisé dans le cadre du développement de l’application **Touche pas au klaxon**.
