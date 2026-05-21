@@ -2,20 +2,21 @@
 
 ## Description
 
-Touche pas au klaxon est une application web intranet de covoiturage inter-sites développée en PHP selon une architecture MVC. Elle permet de diffuser les trajets professionnels prévus entre les différentes agences de l’entreprise afin de favoriser le covoiturage et de réduire le nombre de véhicules utilisés.
+Touche pas au klaxon est une application web intranet de covoiturage inter-sites développée en PHP selon une architecture MVC.  
+Elle permet de diffuser les trajets professionnels prévus entre les différentes agences de l’entreprise afin de favoriser le covoiturage et de réduire le nombre de véhicules utilisés.
 
 ## Fonctionnalités
 
 ### Visiteur
 - Consulter la liste des trajets planifiés ayant encore des places disponibles.
-- Voir uniquement les trajets à venir, triés par date de départ croissante. 
+- Voir uniquement les trajets à venir, triés par date de départ croissante.
 
 ### Utilisateur connecté
 - Se connecter à l’application.
 - Consulter les détails d’un trajet.
 - Créer un trajet.
 - Modifier les trajets dont il est l’auteur.
-- Supprimer les trajets dont il est l’auteur. 
+- Supprimer les trajets dont il est l’auteur.
 
 ### Administrateur
 - Accéder au tableau de bord.
@@ -23,17 +24,19 @@ Touche pas au klaxon est une application web intranet de covoiturage inter-sites
 - Lister les agences.
 - Créer, modifier et supprimer une agence.
 - Lister les trajets.
-- Supprimer un trajet. 
+- Supprimer un trajet.
 
 ## Technologies utilisées
 
-- PHP
+- PHP 8.1+
 - Architecture MVC
 - MySQL ou MariaDB
-- Bootstrap
+- Bootstrap 5
 - Sass
+- Composer
 - PHPStan
-- PHPUnit [file:206]
+- PHPUnit
+- Git / GitHub
 
 ## Prérequis
 
@@ -42,14 +45,14 @@ Avant de lancer le projet, il faut disposer de :
 - PHP 8.1 ou supérieur
 - Composer
 - MySQL ou MariaDB
-- Node.js et npm si la compilation Sass est utilisée 
+- Node.js et npm si la compilation Sass est utilisée
 
 ## Installation
 
 1. Cloner le dépôt GitHub :
    ```bash
-   git clone https://github.com/ton-pseudo/touche-pas-au-klaxon.git
-   cd TOUCHE-PAS-AU-KLAXON
+   git clone https://github.com/Maygae/touche-pas-au-klaxon.git
+   cd touche-pas-au-klaxon
    ```
 
 2. Installer les dépendances PHP :
@@ -69,14 +72,14 @@ Avant de lancer le projet, il faut disposer de :
    mysql -u root -p klaxon < sql/schema.sql
    ```
 
-6. Importer le jeu d’essais :
+6. Importer le jeu d’essai :
    ```bash
    mysql -u root -p klaxon < sql/seeds.sql
    ```
 
-7. Configurer les accès à la base de données dans le fichier de configuration du projet (par exemple dans `config/`).
+7. Configurer les accès à la base de données dans le fichier `.env` ou dans le fichier de configuration du projet selon l’architecture retenue.
 
-8. Lancer le serveur local, par exemple :
+8. Lancer le serveur local :
    ```bash
    php -S localhost:8000 -t public
    ```
@@ -85,8 +88,6 @@ Avant de lancer le projet, il faut disposer de :
    ```text
    http://localhost:8000
    ```
-
-Le livrable attendu doit inclure le script de création de la base, le script d’alimentation, et la procédure d’installation et de lancement, ce que cette section couvre. 
 
 ## Structure du projet
 
@@ -114,7 +115,7 @@ phpunit.xml
 README.md
 ```
 
-Cette organisation respecte la contrainte d’une application PHP en architecture MVC avec séparation des contrôleurs, modèles, vues et du cœur applicatif, ainsi que les dossiers techniques nécessaires (configuration, assets, scripts SQL, tests, dépendances). 
+Cette organisation respecte une architecture MVC avec séparation des contrôleurs, modèles, vues et du cœur applicatif, ainsi que les dossiers techniques nécessaires (configuration, assets, scripts SQL, tests et dépendances).
 
 ## Scripts utiles
 
@@ -128,11 +129,9 @@ composer analyse
 composer test
 ```
 
-Le brief impose l’utilisation de PHPStan pour la qualité du code et de PHPUnit pour les tests unitaires. 
-
 ## Contrôles de cohérence
 
-L’application vérifie notamment les règles suivantes lors de la création ou de la modification d’un trajet : 
+L’application vérifie notamment les règles suivantes lors de la création ou de la modification d’un trajet :
 
 - l’agence de départ et l’agence d’arrivée doivent être différentes ;
 - la date et l’heure d’arrivée doivent être postérieures à celles du départ ;
@@ -148,17 +147,15 @@ L’application vérifie notamment les règles suivantes lors de la création ou
 - Email : `sophie.dubois@email.fr`
 - Mot de passe : `password`
 
-Le brief demande explicitement de fournir les identifiants d’un compte admin et d’un compte utilisateur. Remplace ces valeurs par celles utilisées dans ton jeu d’essais réel avant le rendu final. 
-
 ## Livrables présents dans le dépôt
 
 Le dépôt GitHub contient :
 
 - le code du projet ;
 - le script de création de la base de données ;
-- le script d’alimentation de la base de données (jeu d’essais) ;
-- ce fichier README.md. 
+- le script d’alimentation de la base de données ;
+- ce fichier README.md.
 
 ## Auteur
 
-Projet réalisé dans le cadre du développement de l’application **Touche pas au klaxon**.
+Projet réalisé dans le cadre de la préparation au titre professionnel Développeur web et web mobile.
